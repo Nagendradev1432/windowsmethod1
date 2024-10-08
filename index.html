@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <img src="./WhatsApp Image 2024-09-02 at 4.08.53 PM.jpeg" alt=""> -->
+    <form onsubmit="demo(event)">
+        <input type="text" required id="f1">
+        <label>Name:</label>
+        <input type="text" required id="f2">
+        <label>phone number</label>
+        <input type="text" required id="f3">
+        <label>Blood group</label>
+        <input type="text" required id="f4">
+        <label>Company Name</label>
+
+        <input type="submit"> 
+        <div id="id1"></div>
+        
+
+    </form>
+    <!-- <img src="./WhatsApp Image 2024-09-02 at 4.08.53 PM.jpeg" alt=""> -->
+    <script>
+        
+        function demo(event){
+            event.preventDefault();
+           let div1=document.getElementById("id1")
+           div1.style.border="0px solid"
+           div1.style.height="380px"
+           div1.style.width="290px"
+           div1.style.marginTop="90px" 
+           div1.style.marginLeft="200px"
+           div1.style.textAlign="center"
+           div1.style.padding="20px"
+           div1.style.borderRadius="40px"
+           div1.style.boxShadow="0px 0px 0px 5px black"
+           div1.style.backgroundColor="pink"
+           
+
+
+          let img=document.createElement("img")
+          div1.appendChild(img)
+          img.setAttribute("src","WhatsApp Image 2024-09-02 at 4.08.53 PM.jpeg")
+          img.style.width="120px"
+          img.style.borderRadius="50%"
+          
+            let f1=document.getElementById("f1")
+            let p1=document.createElement("p")
+            div1.appendChild(p1)
+            p1.innerHTML="<b>Name:"+f1.value
+
+            let f2=document.getElementById("f2")
+            let phone=document.createElement("p")
+            div1.appendChild(phone)
+            phone.innerHTML="<b>Phone Number:"+f2.value
+
+            let blood=document.getElementById("f3")
+            let bp=document.createElement("p")
+            div1.appendChild(bp)
+            bp.innerHTML="<b>Blood Group:"+f3.value  
+            
+           let comn=document.getElementById("f4")
+           let cmn=document.createElement("p")
+           div1.appendChild(cmn)
+           cmn.innerHTML="<b>Company Name:"+f4.value     
+       
+           
+    }
+    </script>
+</body>
+</html>
